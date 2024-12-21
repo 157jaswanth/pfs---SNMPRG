@@ -1,0 +1,18 @@
+{% extends 'dashboard.html' %}
+<!-- Add Bootstrap CSS -->
+{% block addcss %}
+<link rel="stylesheet" href="{{url_for('static',filename='add.css')}}">
+{% endblock %}
+
+{% block content %}
+    <form method="post">
+        <div class="one">
+            <h1>ADD NOTES</h1><br><br>
+            <label>title</label>
+            <input type="text"  name="title" placeholder="Yourbook"> <br>
+            <label class="two">description</label>
+            <input type="text" name="content" placeholder="description"> <br>
+            <button type="submit">submit</button>
+        </div>
+    </form>
+{% endblock %}
